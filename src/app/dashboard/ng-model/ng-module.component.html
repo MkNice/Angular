@@ -1,0 +1,11 @@
+<input ngModel (ngModelChange)="data = $event">
+{{data}}
+<!--С шаблона в компонент-->
+
+<input [(ngModel)]="data">
+<!--Двухсторонняя связка-->
+
+<input [ngModel]="data">
+<!--С мозгов в компонент-->
+
+<input [value]="data">

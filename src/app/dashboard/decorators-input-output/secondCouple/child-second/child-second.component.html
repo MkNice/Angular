@@ -1,0 +1,5 @@
+<input ngModel (ngModelChange)="onChange($event)">
+<input ngModel (ngModelChange)="data.emit($event)">
+
+<input (input)='onChangeInput($event)'>
+<!-- ngModel здесь необходим для того чтобы работал ngModelChange, в противном случае работать не будет -->

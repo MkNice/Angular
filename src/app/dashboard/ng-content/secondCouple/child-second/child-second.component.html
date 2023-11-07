@@ -1,0 +1,29 @@
+Default
+<!-- <ng-content></ng-content> -->
+<ng-content select="section"></ng-content>
+
+<ng-content select="[question]"></ng-content>
+
+<ng-content select="[answer]"></ng-content>
+<!-- В общем такая фича попробую сначала объяснить что тут вообще накалякано
+Первый ng-content, это по сути весь контект который будет передан с родительского компонента
+пример <app-child>Blablabla<app-child> Т.е. в ng-content попадёт blablabla.
+Остальные же ng-contents будут видны и туда будет попадать контент только тогда, когда в родиле мы к какому-то тегу
+явно прикрепим одинз из атрибутов которые мы здесь написали question/answer
+
+Т.е. если в родителе
+<app-child-second>
+  <div answer>some div</div>
+  <p question>PPP?</p>
+</app-child-second>
+
+Вот собсно у нашего div-a есть атрибут answer, значит он здесь подставится в ng-content с select="[answer]" именно в таком
+порядке, и не важно что в родителе он находится в другом порядке
+Чтобы так сделать нужно именно так и писать select="[question]" - таким образом мы резервируем атрибут question
+и всё что будет с ним использовано будет спроецировано
+
+Так же нужно добавить что мы можем туда прокидывать не только атрибуты, а и по сути теги
+Аля вот так ng-content select="section"
+
+В обычный ng-content будет по сути попадать всё остальное что не имеет ни атрибутов aswer/question и не теги section
+-->
