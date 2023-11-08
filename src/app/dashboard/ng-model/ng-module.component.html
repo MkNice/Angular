@@ -1,11 +1,19 @@
-<input ngModel (ngModelChange)="data = $event">
-{{data}}
-<!--С шаблона в компонент-->
+<!-- <div>
+  <input ngModel (ngModelChange)="data = $event">
+  <input ngModel (ngModelChange)="getData($event)">
 
-<input [(ngModel)]="data">
-<!--Двухсторонняя связка-->
+  С шаблона в компонент
+</div>
+<div>
 
-<input [ngModel]="data">
-<!--С мозгов в компонент-->
+  <input [(ngModel)]="data">
+  Двухсторонняя связка
+</div>
+<div>
+  <input [ngModel]="data">
 
-<input [value]="data">
+  <input [value]="data">
+  С мозгов в компонент
+
+</div>
+-->

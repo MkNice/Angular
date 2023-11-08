@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-ng-model',
@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./ng-module.component.scss']
 })
 export class NgModuleComponent {
-  public  data = ''
+  public data: string = ''
+
+  public getData(event: string): void {
+    this.data = event;
+    console.log(this.data)
+  }
 
 }
