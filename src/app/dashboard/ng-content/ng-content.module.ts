@@ -23,8 +23,9 @@ import { ParentThirdComponent } from './thirdCouple/parent-third/parent-third.co
   imports: [
     CommonModule
   ],
-  exports: [
-    NgContentComponent,
-  ]
+    exports: [
+        NgContentComponent,
+        ChildSecondComponent,
+    ]
 })
 export class NgContentModule { }

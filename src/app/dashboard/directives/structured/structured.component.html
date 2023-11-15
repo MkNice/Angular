@@ -1,1 +1,38 @@
-<p>structured works!</p>
+<div *ngIf="isData">
+  <p *ngFor="let data of someData"> {{data}}.
+      <span [ngSwitch]="data">
+        <ng-template ngSwitchCase="1">{{data * 2}}</ng-template>
+        <ng-template ngSwitchCase="2">{{data * 3}}</ng-template>
+        <ng-template ngSwitchCase="3">{{data * 4}}</ng-template>
+        <ng-template ngSwitchCase="4">{{data * 5}}</ng-template>
+        <ng-template ngSwitchDefault>Default</ng-template>
+      </span>
+  </p>
+</div>
+<p>
+  I have {{count1}} items, but I could also say
+
+  <span [ngSwitch]="count1">
+ <ng-template ngSwitchCase="zero">there are no items.</ng-template>
+ <ng-template ngSwitchCase="one">there is one item.</ng-template>
+ <ng-template ngSwitchCase="2">there are four items.</ng-template>
+ <ng-template ngSwitchCase="many">there are many items.</ng-template>
+ <ng-template ngSwitchCase="other">there are some items.</ng-template>
+ </span>
+</p>
+
+<p>
+  I have {{count}} items, but I could also say
+
+  <span [ngPlural]="count">
+    <ng-template ngPluralCase="0">there are no items.</ng-template>
+    <ng-template ngPluralCase="1">there is one item.</ng-template>
+    <ng-template ngPluralCase="2">there are couple items.</ng-template>
+    <ng-template ngPluralCase=">2">there are many items.</ng-template>
+    <ng-template ngPluralCase="other">there are some items.</ng-template>
+ </span>
+</p>
+
+<!--В общем вот эта штука плурал, чем-то напоминает свич, единсвенное плурал принимает число, а свич по сути может и строки принимать.-->
+<!--Да и как-то не совсем корректно оно отрабатывает, хер пойми, ощущение что эта штука депрекейтед,-->
+<!--мейби позже ещё поразбираюсь в этой фигне-->

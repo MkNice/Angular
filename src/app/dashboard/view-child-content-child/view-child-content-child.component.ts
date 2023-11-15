@@ -35,5 +35,15 @@ export class ViewChildContentChildComponent implements OnInit, AfterViewInit{
     console.log('this=>>>>>>',this);
   }
 
+  public vb(): void {
+    // const obj = {
+    //   name: 'hj',
+    //   age: 76,
+    // };
+    //
+    // for (const key of Object.keys<>(obj) as Array<keyof typeof obj>) {
+    //   console.log(key, obj[key]);
+    // }
+  }
 
 }

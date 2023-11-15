@@ -1,4 +1,14 @@
-import {ChangeDetectionStrategy, Component, OnChanges, SimpleChanges} from '@angular/core';
+import {
+  AfterContentInit,
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+  ContentChild, ElementRef,
+  OnChanges,
+  SimpleChanges, ViewChild
+} from '@angular/core';
+import {ChildComponent} from "./child/child.component";
+import {ChildSecondComponent} from "./child-second/child-second.component";
 
 @Component({
   selector: 'app-lifecycle-hooks',
@@ -7,11 +17,16 @@ import {ChangeDetectionStrategy, Component, OnChanges, SimpleChanges} from '@ang
   changeDetection: ChangeDetectionStrategy.OnPush
 
 })
-export class LifecycleHooksComponent implements  OnChanges{
+export class LifecycleHooksComponent implements  AfterViewInit{
+  @ViewChild(ChildComponent) public  childView!: ChildComponent;
+
+  ngAfterViewInit(): void {
+    // console.log('afterViewInit', this.childView);
+  }
   public smthData: string = 'Hello motherfucker'
   public anotherData: string = 'another Data';
 
-  public  ngOnChanges(changes: SimpleChanges):void{
-    console.log('ParentChangesasdasd as afdas fasd fsd', changes)
-  }
+
+  // todo Напиши свой дебаунсер, эта такая штука которая делает делей на инпуте, аля 300мс и потом аля срабатывает тип метод
+  // todo или что-то вроде того, аля какой-то нибудь живой поиск.
 }
