@@ -1,1 +1,10 @@
-<p>attribute works!</p>
+<div [ngClass]="classNg">Div with ngClass</div>
+<div [ngClass]="{'innerStyle': true}">Div with ngClass innerStyle</div>
+<div [class.innerStyle]="true">rapappa</div>
+
+
+<div [ngStyle]="{'font-size': '40px'}">Div with NgStyle</div>
+<div [style.display]="isVisible ? 'block' : 'hidden'">I visible now</div>
+<div [hidden]="true">Some hidden Info</div>
+
+<div appMyAttrDirective>My Attribute directive</div>
