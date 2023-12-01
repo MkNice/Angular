@@ -13,9 +13,9 @@ import {DirectivesModule} from "./directives/directives.module";
     declarations: [
         DashboardComponent,
     ],
-    exports: [
-        DashboardComponent
-    ],
+  exports: [
+    DashboardComponent,
+  ],
   imports: [
     CommonModule,
     DecoratorsInputOutputModule,

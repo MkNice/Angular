@@ -7,4 +7,35 @@
 <div [style.display]="isVisible ? 'block' : 'hidden'">I visible now</div>
 <div [hidden]="true">Some hidden Info</div>
 
-<div appMyAttrDirective>My Attribute directive</div>
+<div style="margin-bottom: 50px" appMyAttrDirective>My Attribute directive</div>
+
+<div *ngIf="isVisible" style="background-color: red; color: blue; font-size: 30px; padding: 30px; margin-top: 50px"
+     appDisappear>I disappear When u enter to me ur cursor
+</div>
+
+
+<input appMyAttrDirectiveSecond>
+<div style="height: 500px; width: 300px; background-color: blueviolet"></div>
+
+
+<div class="someClassCss" [appHostBinding]="variableParent" [suka2]="variableParent">Я блядь не понимаю как вообще
+  передать ебучие аргументы в ебучую директивуj
+</div>
+Передавать данные в директиву можно при помощи декоратора Input. Т.е. по сути как обычному компоненту.
+СКорее всего можно из директивы тоже передавть данные в компоненту, через output.
+
+Так же можно использовать само название директивы для того чтобы передать какие-то данные, для этого
+В декораторе инпута нужно прокинуть название директивы в строке, и тогда будет оки доки.
+
+Не лишним будет добавть тот факт что сначала отрабатывает конструктор компоненат, потом директивы
+Потом ngOnInit компонента, директивы, данные с инпута появляются с хука ngOnInit, т.е. в конструкторе его нет
+
+
+<div [appHostbindingGetter]="'someClassCss'">
+  loreasdloreasdloreasdloreasdloreasdloreasdlore
+  asdloreasdloreasdloreasdloreasdloreasdloreasdlore
+  asdloreasdloreasdloreasdloreasdloreasdloreasdlorea
+  sdloreasdloreasdloreasdloreasdloreasdloreasdloreasd
+  loreasdloreasdloreasdloreasdloreasdloreasdloreasd
+</div>
+
