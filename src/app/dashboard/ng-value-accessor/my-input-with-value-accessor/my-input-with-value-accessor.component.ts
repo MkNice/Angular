@@ -16,9 +16,8 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 export class MyInputWithValueAccessorComponent implements ControlValueAccessor{
   public value = '';
 
-  public onChange:any = () => {}
-  public onTouched:any = () => {}
-
+  public onChange:any = () => { }
+  public onTouched:any = () => { }
 
   public change(event: Event):void{
     const target = event.target as HTMLInputElement;

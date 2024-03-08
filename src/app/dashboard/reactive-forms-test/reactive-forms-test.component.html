@@ -1,0 +1,9 @@
+<p>reactive-forms-test works!</p>
+<form [formGroup]="RForms">
+  <input type="text" placeholder="login" formControlName="login" />
+  <div *ngIf="RForms.get('login')?.dirty">
+    <div >login is dirty</div>
+  </div>
+  <input type="text" placeholder="password" formControlName="password" />
+  <input type="text" placeholder="tip" formControlName="tip"/>
+</form>

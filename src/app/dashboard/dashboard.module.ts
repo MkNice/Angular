@@ -9,11 +9,12 @@ import { ViewChildContentChildModule } from './view-child-content-child/view-chi
 import { LifecycleHooksModule } from './lifecycle-hooks/lifecycle-hooks.module';
 import { DirectivesModule } from './directives/directives.module';
 import { NgValueAccessorModule } from './ng-value-accessor/ng-value-accessor.module';
+import { ChangeDetectionModule } from './change-detection/change-detection.module';
+import { NgxSubFormLearnModule } from './ngx-sub-form-learn/ngx-sub-form-learn.module';
+import { ReactiveFormsTestModule } from './reactive-forms-test/reactive-forms-test.module';
 
 @NgModule({
-  declarations: [
-    DashboardComponent,
-  ],
+  declarations: [DashboardComponent],
   exports: [DashboardComponent],
   imports: [
     CommonModule,
@@ -25,6 +26,9 @@ import { NgValueAccessorModule } from './ng-value-accessor/ng-value-accessor.mod
     LifecycleHooksModule,
     DirectivesModule,
     NgValueAccessorModule,
+    ChangeDetectionModule,
+    NgxSubFormLearnModule,
+    ReactiveFormsTestModule,
   ],
 })
 export class DashboardModule {}
