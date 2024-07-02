@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./child-third.component.scss']
 })
 export class ChildThirdComponent {
-
+  s(){
+    let i = 10;
+    while(i --> 0){
+      
+    }
+  }
 }

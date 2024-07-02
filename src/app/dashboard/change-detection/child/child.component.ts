@@ -11,6 +11,6 @@ export class ChildComponent implements OnInit{
   @Input() obj = {}
 
   ngOnInit(){
-    console.log('ngOnInit child');
+
   }
 }

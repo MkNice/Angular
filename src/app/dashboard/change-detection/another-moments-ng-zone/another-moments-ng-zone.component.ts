@@ -37,6 +37,7 @@ export class AnotherMomentsNgZoneComponent {
   public getRandomNumber2(): void {
     this.stateNumber = Math.random() * 1000;
   }
+
   public getRandomNumber(): number {
     this.cdr.markForCheck();
     return Math.random() * 1000;

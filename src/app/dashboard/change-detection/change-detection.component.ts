@@ -20,7 +20,7 @@ export class ChangeDetectionComponent implements AfterViewInit {
   };
 
   constructor(public ngzone: NgZone, public cdr: ChangeDetectorRef, private AR: ApplicationRef) {
-    this.cdr.detach()
+    // this.cdr.detach()
     
     this.AR.tick() // Вот этот вод метод тригерит ChangeDetector по всей приложухе. Это именно тот метод, который вызывается
     // после достижения рутового файлика, в системе, когда мы затригерили какой-то евент, в каком-то дочернем элементе,
@@ -48,7 +48,7 @@ export class ChangeDetectionComponent implements AfterViewInit {
     setTimeout(() => {
       this.obj.name = '123';
       this.obj.age = '123';
-
+      
       this.cdr.markForCheck();
     }, 500);
   }

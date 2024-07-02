@@ -4,7 +4,7 @@ import { ControlValueAccessor, NgControl } from '@angular/forms';
 @Component({
   selector: 'app-my-input-with-value-accessor-second',
   templateUrl: './my-input-with-value-accessor-second.component.html',
-  styleUrls: ['./my-input-with-value-accessor-second.component.scss']
+  styleUrls: ['./my-input-with-value-accessor-second.component.scss'],
 })
 export class MyInputWithValueAccessorSecondComponent implements ControlValueAccessor {
   public value = ''

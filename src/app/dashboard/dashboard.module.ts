@@ -12,6 +12,7 @@ import { NgValueAccessorModule } from './ng-value-accessor/ng-value-accessor.mod
 import { ChangeDetectionModule } from './change-detection/change-detection.module';
 import { NgxSubFormLearnModule } from './ngx-sub-form-learn/ngx-sub-form-learn.module';
 import { ReactiveFormsTestModule } from './reactive-forms-test/reactive-forms-test.module';
+import { TestTrackByModule } from './test-track-by/test-track-by.module';
 
 @NgModule({
   declarations: [DashboardComponent],
@@ -29,6 +30,7 @@ import { ReactiveFormsTestModule } from './reactive-forms-test/reactive-forms-te
     ChangeDetectionModule,
     NgxSubFormLearnModule,
     ReactiveFormsTestModule,
+    TestTrackByModule
   ],
 })
 export class DashboardModule {}
