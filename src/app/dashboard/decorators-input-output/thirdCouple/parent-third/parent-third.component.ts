@@ -9,9 +9,9 @@ export class ParentThirdComponent {
   public dataParent!:string;
 
   constructor(){
-    setInterval(()=>{
-      console.log(this.dataParent);
-    },1000)
+    // setInterval(()=>{
+    //   console.log(this.dataParent);
+    // },1000)
   }
 
   public getDataFromChild(event : string):void {

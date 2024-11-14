@@ -1,14 +1,8 @@
 <div *ngFor="let data of bigArray;  trackBy: trackByIndex" >
-
   <div class="card">
     <span class="id" style="color: white; font-size: 30px;">ID:{{data?.id}}</span>
-  
     <h3 style="color: white; text-align: center;">{{data?.title}}</h3>
     <img src="https://via.placeholder.com/600/92c952" [alt]="data?.albumId" width="150" height="150">
     <button>Buy</button>
   </div>
-  
 </div>
-
-
-

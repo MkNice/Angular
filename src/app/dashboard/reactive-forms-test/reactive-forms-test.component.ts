@@ -29,5 +29,11 @@ export class ReactiveFormsTestComponent {
       passwpord: [null, [Validators.required, Validators.maxLength(10)]],
       tip: [null, [Validators.required, Validators.maxLength(10)]],
     });
+    console.log(this.RForms.contains('login'));
+    
+  }
+  public getData(){
+    console.log(this.RForms.controls);
+    
   }
 }

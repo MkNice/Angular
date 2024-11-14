@@ -13,9 +13,13 @@ import { ChangeDetectionModule } from './change-detection/change-detection.modul
 import { NgxSubFormLearnModule } from './ngx-sub-form-learn/ngx-sub-form-learn.module';
 import { ReactiveFormsTestModule } from './reactive-forms-test/reactive-forms-test.module';
 import { TestTrackByModule } from './test-track-by/test-track-by.module';
+import { SignalsModule } from './signals/signals.module';
+import { PipesModule } from './pipes/pipes.module';
+import { NgPrimeExamplesComponent } from './ng-prime-examples/ng-prime-examples.component';
+import { FirstComponent } from './ngPrimeExamples/componentns/first/first.component';
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [DashboardComponent, NgPrimeExamplesComponent, FirstComponent],
   exports: [DashboardComponent],
   imports: [
     CommonModule,
@@ -30,7 +34,9 @@ import { TestTrackByModule } from './test-track-by/test-track-by.module';
     ChangeDetectionModule,
     NgxSubFormLearnModule,
     ReactiveFormsTestModule,
-    TestTrackByModule
+    TestTrackByModule,
+    SignalsModule,
+    PipesModule
   ],
 })
 export class DashboardModule {}
